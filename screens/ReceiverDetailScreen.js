@@ -3,7 +3,7 @@ import {View,Text,StyleSheet,TouchableOpacity} from 'react-native';
 import{Card,Header,Icon} from 'react-native-elements';
 import firebase from 'firebase';
 import db from '../config';
-
+import SafeAreaProvider from 'react-native-safe-area-context'
 export default class RecieverDetailsScreen extends React.Component{
     constructor(props){
         super(props);
@@ -63,6 +63,7 @@ export default class RecieverDetailsScreen extends React.Component{
 
     render(){
         return(
+          // <SafeAreaProvider>
           <View style={styles.container}>
             <View style={{flex:0.1}}>
               <Header
@@ -118,6 +119,7 @@ export default class RecieverDetailsScreen extends React.Component{
               }
             </View>
           </View>
+          // </SafeAreaProvider>
         )
       }
     

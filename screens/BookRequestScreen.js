@@ -3,7 +3,7 @@ import {Text,View,StyleSheet,TextInput,KeyboardAvoidingView,TouchableOpacity,Scr
 import MyHeader from '../components/MyHeader'
 import * as firebase from 'firebase'
 import db from '../config'
-
+import SafeAreaProvider from 'react-native-safe-area-context'
 export default class BookRequestScreen extends Component{
   constructor(){
     super();
@@ -180,7 +180,7 @@ updateBookRequestStatus=()=>{
       return(
 
         // Status screen
-
+        // <SafeAreaProvider>
         <View style = {{flex:1,justifyContent:'center'}}>
           <View style={{borderColor:"orange",borderWidth:2,justifyContent:'center',alignItems:'center',padding:10,margin:10}}>
           <Text>Book Name</Text>
@@ -201,11 +201,13 @@ updateBookRequestStatus=()=>{
           <Text>I received the book </Text>
           </TouchableOpacity>
         </View>
+        // </SafeAreaProvider>
       )
     }
     else
     {
     return(
+      // <SafeAreaProvider>
       // Form screen
         <View style={{flex:1}}>
           <MyHeader title="Request Book" navigation ={this.props.navigation}/>
@@ -245,6 +247,7 @@ updateBookRequestStatus=()=>{
             </KeyboardAvoidingView>
             </ScrollView>
         </View>
+        // </SafeAreaProvider>
     )
   }
 }

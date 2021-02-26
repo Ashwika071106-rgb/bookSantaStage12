@@ -4,7 +4,7 @@ import {ListItem} from 'react-native-elements';
 import MyHeader from '../components/MyHeader';
 import firebase from 'firebase';
 import db from '../config';
-
+import SafeAreaProvider from 'react-native-safe-area-context'
 export default class MyReceivedBookScreen extends React.Component{
     constructor(){
         super();
@@ -50,6 +50,7 @@ export default class MyReceivedBookScreen extends React.Component{
     
       render(){
           return(
+            // <SafeAreaProvider>
               <View style = {{flex:1}} >
                   <MyHeader title = "Received Books" navigation = {this.props.navigation}/>
                   <View style = {{flex:1}}>
@@ -72,6 +73,7 @@ export default class MyReceivedBookScreen extends React.Component{
                       }
                   </View>
               </View>
+              // </SafeAreaProvider>
           )
       }
 }

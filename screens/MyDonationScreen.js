@@ -4,7 +4,7 @@ import {Card,Icon,ListItem} from 'react-native-elements'
 import MyHeader from '../components/MyHeader.js'
 import firebase from 'firebase';
 import db from '../config.js'
-
+import SafeAreaProvider from 'react-native-safe-area-context'
 export default class MyDonationScreen extends Component {
    constructor(){
      super()
@@ -127,6 +127,7 @@ export default class MyDonationScreen extends Component {
 
    render(){
      return(
+      // <SafeAreaProvider>
        <View style={{flex:1}}>
          <MyHeader navigation={this.props.navigation} title="My Donations"/>
          <View style={{flex:1}}>
@@ -147,6 +148,7 @@ export default class MyDonationScreen extends Component {
            }
          </View>
        </View>
+      //  </SafeAreaProvider>
      )
    }
    }

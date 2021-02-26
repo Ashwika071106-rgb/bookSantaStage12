@@ -3,7 +3,7 @@ import {Text,View,TextInput,StyleSheet,TouchableOpacity,Alert,Modal,KeyboardAvoi
 import db from '../config';
 import * as firebase from 'firebase';
 import SantaAnimation from '../components/SantaClaus';
-
+import SafeAreaProvider from 'react-native-safe-area-context'
 export default class WelcomeScreen extends React.Component{
     constructor(){
       super();
@@ -172,6 +172,7 @@ export default class WelcomeScreen extends React.Component{
   }
     render(){
       return(
+        // <SafeAreaProvider>
         <View style={styles.container}>
           <View style={{justifyContent: 'center',alignItems: 'center'}}>
   
@@ -221,6 +222,7 @@ export default class WelcomeScreen extends React.Component{
            </TouchableOpacity>
         </View>
       </View>
+      // </SafeAreaProvider>
       )
     }
   }

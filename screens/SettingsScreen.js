@@ -3,7 +3,7 @@ import {Text,View,StyleSheet,TouchableOpacity,TextInput,ScrollView,Alert,Keyboar
 import firebase from 'firebase';
 import db from '../config';
 import MyHeader from '../components/MyHeader';
-
+import SafeAreaProvider from 'react-native-safe-area-context'
 export default class SettingsScreen extends Component{
     constructor(){
       super();
@@ -55,6 +55,7 @@ export default class SettingsScreen extends Component{
   
     render(){
       return(
+        // <SafeAreaProvider>
         <View style={styles.container} >
           <MyHeader title="Settings" navigation={this.props.navigation}/>
           <View style={styles.formContainer}>
@@ -111,6 +112,7 @@ export default class SettingsScreen extends Component{
               </TouchableOpacity>
           </View>
         </View>
+        // </SafeAreaProvider>
       )
     }
   }

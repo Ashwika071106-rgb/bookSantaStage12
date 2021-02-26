@@ -6,7 +6,7 @@ import MyHeader from '../components/MyHeader';
 import SwipableFlatList from '../components/SwipableFlatList';
 
 import db from '../config';
-
+import SafeAreaProvider from 'react-native-safe-area-context'
 export default class NotificationScreen extends React.Component{
     constructor(props) {
         super(props);
@@ -61,6 +61,7 @@ export default class NotificationScreen extends React.Component{
   
    render(){
     return(
+      // <SafeAreaProvider>
       <View style={styles.container}>
         <View style={{flex:0.1}}>
           <MyHeader title={"Notifications"} navigation={this.props.navigation}/>
@@ -79,6 +80,7 @@ export default class NotificationScreen extends React.Component{
           }
         </View>
       </View>
+      // </SafeAreaProvider>
     )
   }
 }
